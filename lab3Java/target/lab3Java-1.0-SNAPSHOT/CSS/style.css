@@ -1,0 +1,144 @@
+.tabs {
+    position: relative;
+    margin: 0;
+    padding: 15px;
+}
+
+.tabs li {
+    display: inline-block;
+    margin-right: 1px;
+    font-size: 14px;
+}
+
+
+.tabs li a {
+    display: block;
+    padding: 10px 15px;
+    background: rgba(219,219,219,1);
+    color: #4B5056;
+}
+
+.tabs a + div {
+    position: absolute;
+    left: 0;
+    height: 0;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+.tabs :target a { background: rgba(219,219,219,0); }
+
+.tabs :target a + div {
+    height: 100%;
+    overflow: visible;
+}
+
+
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    display: grid;
+    grid-template-areas:
+		"box2 box3 box4"
+		"box2 box3 box4"
+		"box5 box5 box4";
+    grid-template-columns: 0.7fr 1.6fr 0.7fr;
+    grid-template-rows: 1fr 1.5fr 0.5fr;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: skyblue;
+}
+
+#box1text {
+    padding: 20px;
+    text-align: right;
+    font-size: 40px;
+}
+
+#box1inner {
+    margin: 20px;
+    align-self: center;
+    text-align: right;
+    padding: 10px;
+    font-size: 40px;
+    background-color: white;
+}
+
+#box2 {
+    grid-area: box2;
+    background-color: orangered;
+    text-align: right;
+}
+
+#boxes345 {
+
+    background-color: lightgray;
+}
+
+
+#box3 {
+    grid-area: box3;
+    justify-content: right;
+    background-color: limegreen;
+}
+
+#box3text {
+    text-align: right;
+    padding: 10px;
+}
+
+
+#box4 {
+    padding: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    grid-area: box4;
+    background-color: lightcoral;
+}
+
+#box5 {
+    text-align: left;
+    grid-area: box5;
+    background-color: orange;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: skyblue;
+}
+
+#box6text {
+    padding: 20px;
+    text-align: right;
+    font-size: 40px;
+}
+
+#box6inner {
+    margin: 20px;
+    align-self: center;
+    text-align: left;
+    padding: 10px;
+    font-size: 40px;
+    background-color: white;
+}
+
+
+p {
+    font-size: 30px;
+    padding: 10px;
+}
+
+a {
+    font-size: 30px;
+
+}
